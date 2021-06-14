@@ -1,0 +1,93 @@
+/* Small screens */
+@media only screen { } /* Define mobile styles */
+
+@media only screen and (max-width: 48em) { 
+    h2{
+        font-size: 35px;
+    }
+    .section-title h2 {
+        font-size: 35px;
+        text-align: left;
+        line-height: 1.2;
+    }
+    .hero-content-area h1{
+        font-size: 32px;
+        line-height: 1.2;
+    }
+    .hero-area {
+        padding-top: 200px;
+        padding-bottom: 160px;
+    }
+    .hero-content-area {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .single-certification-item {
+        margin: 0 auto;
+        margin-top: 40px;
+        width: auto;
+    }
+
+} /* max-width 768px, mobile-only styles, use when QAing mobile issues */
+
+/* Medium screens*/
+@media only screen and (max-width: 40.063em) {
+    .header-area .top-bar .top-bar-left, .header-area .top-bar .top-bar-right {
+        flex: 0 0 50%;
+    } 
+ } /* max-width 641px, medium screens */
+
+ @media only screen and (max-width: 30.000em) { 
+}/* max-width 480px, medium screens */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
+    .hero-content-area h1{
+        font-size: 50px;
+        line-height: 1;
+    }
+    .hero-content-area {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .single-certification-item {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+/* Large screens*/
+@media only screen and (min-width: 64.063em) { 
+    h1 {
+        font-size: 70px;
+    }
+} /* min-width 1025px, large screens */
+
+
+@media only screen and (max-width: 81.125em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+@media only screen and  (max-width: 79.125em) { 
+    .title-bar-right {
+        text-align: right;
+        float: right;
+        padding: 5px 15px;
+        font-size: 25px;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+    .header-area {
+        margin-top: 1rem;
+    }
+} /* max-width 1267px, use when QAing large screen-only issues */
+
+@media only screen and  (min-width: 79.1875em) { 
+    .title-bar-right {
+        display: none;
+    }
+} /* min-width 1267px, use when QAing large screen-only issues */
+
+/* XLarge screens*/
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */

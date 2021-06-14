@@ -1,0 +1,344 @@
+/*
+Theme Name: Foundation OffCanvas Menu
+Author: imran
+Author URI: https://imranhossain.dev
+Description: Custom offcanvas menu
+Version: 1.0.0
+Tested up to: 5.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. header
+3. Hero
+*/
+
+@font-face {
+	font-family: 'ProximaNovaRegular';
+	src: url('../fonts/ProximaNovaRegular.eot');
+	src: local('ProximaNovaRegular'), url('../fonts/ProximaNovaRegular.woff') format('woff'), url('../fonts/ProximaNovaRegular.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body, p{
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #36474F;
+  overflow-x: hidden !important;
+}
+h1, h2, h3, h4{
+  font-family: 'ProximaNovaRegular';
+}
+
+ .header-area .header-menu>li:last-child a {
+  background-image: linear-gradient(to right, #FDB994 0%, #FD3F70  100%, #FDB392  0%);
+  margin-top: 0;
+  padding: 20px 24px;
+  font-size: 14px;
+  color: #fff;
+  background-size: 200% auto;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  display: block;
+}
+.header-area .header-menu>li:last-child a:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.section-title h2{
+  font-family: 'ProximaNovaRegular';
+  font-size: 42px;
+  color: #0DBBBA;
+  font-weight: 900;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  
+}
+.brand-logo img {
+  max-width: 150px;
+}
+.Certifications-area .section-title h2{
+  text-align: center;
+}
+/*Global Style End*/
+
+/* Header style start*/
+header{
+  position: relative;
+}
+
+.header-area {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 2;
+margin-top: 4rem;
+}
+.header-area .grid-container {
+    max-width: 80rem;
+    width: 100%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin: 0 auto;
+}
+.header-area .top-bar {
+    background-color: transparent;
+}
+
+.header-area .top-bar ul {
+    background-color: transparent;
+}
+
+/* Navigation Menu Style */
+.header-area ul.dropdown li ul {
+    background-color: #fff;
+    border:none;
+}
+.top-bar-right ul li {
+  position: relative;
+  transition: .3s;
+}
+
+.top-bar-right ul li ul {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  margin-top: 30px;
+  transition: .3s;
+}
+
+.top-bar-right ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  margin-top: 0;
+}
+.header-area .menu li a{
+  color: #36474F;
+  font-family: 'ProximaNovaRegular';
+  padding: 19px 15px;
+}
+.header-area .menu li a:hover {
+  opacity: .8;
+}
+.header-area .menu .is-active> a, .header-area ul.dropdown li ul li a:hover{
+  background-color: #0DBBBA;
+  color: #fff;
+}
+
+.header-area ul.dropdown>li.is-active>a{
+    background-color:#fff;
+}
+
+.dropdown .is-dropdown-submenu a {
+  border: 1px solid #dddddd99;
+  border-left: 0;
+  border-right: 0;
+}
+
+/*offcanvas menu style start*/
+.off-canvas > ul {
+  margin-top: 20px;
+}
+
+.off-canvas ul li {
+  border-bottom: 1px solid #ccc;
+}
+
+.off-canvas ul li a {
+  position: relative;
+  display: block;
+  padding: 15px 20px;
+  color: #36474F;
+  transition: .3s;
+}
+
+.off-canvas ul li a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #fff;
+  transition: .3s;
+}
+
+.off-canvas ul li:hover a:before {
+  width: 5px;
+}
+
+.off-canvas ul li a:hover {background: #36474F;color: #fff;}
+.off-canvas ul li ul {
+  background: #68757B;
+}
+
+.off-canvas ul li ul li a {
+  color: #fff;
+}
+
+.off-canvas ul li ul li a:before {opacity: 0;}
+
+.off-canvas ul li ul li ul {
+  background: #000;
+}
+.offcanvas-content h4 {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.offcanvas-content {
+  padding: 0 30px;
+}
+
+.offcanvas-content form input {
+  width: 100%;
+  border-radius: 30px;
+  margin: 5px 0;
+  padding: 10px 20px;
+  height: 40px;
+}
+
+.offcanvas-content form input[type="submit"] {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.offcanvas-content .offcanvas-social-widget ul {
+  text-align: center;
+}
+
+.offcanvas-content .offcanvas-social-widget ul li a:hover {background: none;}
+
+.offcanvas-content .offcanvas-social-widget ul li a:before {
+  background: none;
+}
+
+.offcanvas-content .offcanvas-social-widget ul li a:hover {color: #14679E;}
+
+.offcanvas-social-widget ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.offcanvas-social-widget ul li {
+  display: inline-block;
+}
+
+.offcanvas-social-widget ul li a {
+  font-size: 25px;
+  padding: 10px;
+}
+/*Offcanvas menu style End*/
+
+/*Header Style End*/
+
+/* Hero Area */
+.hero-area {
+position: relative;
+display: flex;
+align-items: center;
+text-align: center;
+padding-top: 30rem; /*Changed*/
+padding-bottom: 330px;
+}
+
+/* OffCanvas Menu */
+div.purtic-offcanvas {
+width: 90%;
+max-width: 300px;
+}
+
+div.purtic-offcanvas .brand-logo {
+margin-top: 41px;
+text-align: center;
+}
+
+/* Responsive Support */
+@media only screen and (max-width: 79.125em) { 
+.header-menu {
+display: none;
+}
+
+}
+/* Header style end*/
+
+/* Hero area style */
+.hero-bg{
+  background-image: url(../img/hero-img/purtec-hero-img-1.jpg);
+}
+.bg-style{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #ECF0F3;
+}
+.hero-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 287px;
+    padding-bottom: 330px;
+
+}
+.hero-content-area {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.hero-content-area h1 {
+  font-size: 70px;
+  font-weight: 900;
+  line-height: .9;
+}
+
+/* Certifications Style start*/
+.Certifications-area {
+  background: #F7FDFD;
+}
+.Certifications-area .section-title h2 {
+  font-weight: 400;
+}
+.single-certification-item {
+  position: relative;
+  text-align: center;
+  padding: 8px;
+  box-shadow: 0px 15px 40px 1px #b4c4c4;
+  border-radius: 24px;
+  height: 168px;
+  width: 168px;
+  padding-top: 20px;
+}
+
+.certification-content {
+  text-align: left;
+  padding-left: 8px;
+}
+
+.certification-content p {
+  position: absolute;
+  width: 86%;
+  bottom:0;
+  line-height: 1.3;
+  color: #36474F;
+}
+/* Certifications Style end*/
